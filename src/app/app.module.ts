@@ -11,13 +11,15 @@ import { PkmnListComponent } from './components/pkmn-list/pkmn-list.component';
 import { PkmnCardComponent } from './components/pkmn-card/pkmn-card.component';
 import { IconsModule } from './modules/icons.module';
 import { FormsModule } from '@angular/forms';
+import { PkmnDetailComponent } from './components/pkmn-detail/pkmn-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PkmnListComponent,
-    PkmnCardComponent
+    PkmnCardComponent,
+    PkmnDetailComponent
   ],
   imports: [
     BrowserModule,
