@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <div class="row justify-content-center m-3">
+        <div class="col-auto">
+            <input type="text" [(ngModel)]="searchText" class="form-control" id="pkmnName" placeholder="Pokémon">
+        </div>
+        <div class="col-auto">
+            <button role="button" class="btn" (click)="submit()">
+                <fa-icon [icon]="['fas', 'search']" [size]="'xl'"></fa-icon>
+            </button>
+        </div>
+    </div>
+    <div *ngIf="pkmnList;else noData" class="row">
+        <div *ngFor="let entrada of pkmnList" class="col-3">
+            <app-pkmn-card [pokemon]="entrada"></app-pkmn-card>
+        </div>
+    </div>
+    <ng-template #noData>
+        <div class="row justify-content-center">
+            <div class="col-auto no-data">
+                <p>No se han encontrado resultados</p>
+            </div>
+        </div>
+    </ng-template>
+</div>
+<div *ngIf="loading" class="d-flex justify-content-center">
+    <span style="margin: 20px;">
+        <fa-icon [icon]="['fas', 'spinner']" [size]="'2xl'" [animation]="'spin-pulse'"
+            [style]="'color: #fd6d63;'"></fa-icon>
+    </span>
+</div>

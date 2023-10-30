@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba($color: red, $alpha: .6);
+
+    img {
+        height: 100px;
+        margin-right: 10px;
+    }
+
+    .title {
+        font-size: 3rem;
+        margin-left: 10px;
+    }
+}
